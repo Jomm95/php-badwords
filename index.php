@@ -1,8 +1,7 @@
 <?php 
-//Creare una variabile con un paragrafo di testo a vostra scelta.
 $paragraph = 'Lorem ipsum elit dolor sit amet consectetur, adipisicing elit. Animi commodi corrupti placeat reprehenderit elit necessitatibus voluptates vel in, inventore elit pariatur aliquam reiciendis, illum accusantium ad consectetur veniam dicta enim unde perferendis.';
 
-$parolaDaCensurare = $_GET['elit'];
+$parolaDaCensurare = $_GET['censura']; //nell'URL scriverò ?censura="parolaCheVoglioCensurare" e verrà nascosta
 
 $censoredParagraph = str_replace($parolaDaCensurare, '***', $paragraph);
 ?>
@@ -18,7 +17,7 @@ $censoredParagraph = str_replace($parolaDaCensurare, '***', $paragraph);
 <body>
 
 <h1>Paragrafo iniziale</h1>
-<p> <?php echo $paragraph ?></p>
+<p> <?php echo $paragraph; ?></p>
 <p> La lunghezza del paragrafo è di <?php echo strlen($paragraph); ?> caratteri.</p>
 
 
